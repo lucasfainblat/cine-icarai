@@ -1,0 +1,15 @@
+/* Extra styles for profile photos */
+.profile-photo {
+  width: 220px;      /* desired render width, adjust as needed */
+  max-width: 40%;    /* responsive cap relative to container */
+  height: auto;      /* preserve aspect ratio */
+  border-radius: 8px; /* slight rounding */
+  object-fit: cover; /* crop if needed */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.profile-photo.small {
+  width: 140px;
+  max-width: 30%;
+}

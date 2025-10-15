@@ -1,11 +1,11 @@
-site_name: Ilha da Boa Viagem (IBV)
-site_url: https://lucasfainblat.github.io/ibv/
+site_name: Cine Icaraí
+site_url: https://lucasfainblat.github.io/cine-icarai
 copyright: Todos os direitos reservados. Proibida a reprodução total ou parcial sem autorização prévia.
 
 theme:
   name: material
   icon:
-    logo: material/island
+    logo: material/movie-roll
   font:
     text: Funnel Sans
     code: Google Sans Code
@@ -18,8 +18,8 @@ theme:
    # toggle:
     #  icon: material/brightness-7
      # name: Acionar modo escuro
-    primary: white
-    accent: black
+    primary: black
+    accent: amber
 
     # Paleta de cores: modo escuro
   #- media: "(prefers-color-scheme: dark)"
@@ -78,7 +78,7 @@ extra:
       - icon: material/email
         link: mailto:solanda@vivas.art.br
       - icon: fontawesome/brands/github
-        link: https://github.com/lucasfainblat/ibv
+        link: https://github.com/lucasfainblat/cine-icarai
   # Carrega scripts adicionais (Mermaid + init)
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
