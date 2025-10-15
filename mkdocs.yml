@@ -1,0 +1,95 @@
+site_name: Ilha da Boa Viagem (IBV)
+site_url: https://lucasfainblat.github.io/ibv/
+copyright: Todos os direitos reservados. Proibida a reprodução total ou parcial sem autorização prévia.
+
+theme:
+  name: material
+  icon:
+    logo: material/island
+  font:
+    text: Funnel Sans
+    code: Google Sans Code
+  language: pt-BR
+
+  palette:
+    # Paleta de cores: modo claro
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+   # toggle:
+    #  icon: material/brightness-7
+     # name: Acionar modo escuro
+    primary: white
+    accent: black
+
+    # Paleta de cores: modo escuro
+  #- media: "(prefers-color-scheme: dark)"
+  #  scheme: slate
+  #  toggle:
+  #    icon: material/brightness-4
+  #    name: Acionar modo claro
+  #  primary: white
+  #  accent: black
+
+  features:
+    - navigation.instant # Página carrega de uma vezada
+    - navigation.instant.prefetch # Página pretendida começa a carregar quando usuário passa cursor pelo link
+    - navigation.instant.preview # Inclui pré-visualizações para todos os níveis de títulos markdown sob links do tipo ``` [título](#){ data preview } ```
+    - navigation.tracking # Atualiza a barra de endereços automaticamente em nível de âncora
+    - navigation.sections # Mostra seções de cada página no menu à esquerda
+   # - navigation.expand # Usuário expande ou recolhe seções
+    - navigation.tabs # Adicona abas com as principais seções do site
+    - navigation.path # Acrescenta "migalhas de pão" ao topo de cada página, facilitando a navegação
+    - navigation.indexes # Incorpora o documento à seção, diminunido a redundância de index à esquerda. Necessário organizar um index.md a cada seção.
+    - toc.follow # Rola a página pra âncora selecionada na tabela de conteúdo
+    - navigation.top # Botão de "voltar ao topo" aparece quando usuário rola a página pra cima
+    - search.suggest # Completa a busca com sugestão
+    - search.highlight # Destaca nas páginas o valor que o usuário buscou
+    - search.share # Permite ao usuário copiar o endereço da busca feita
+    - navigation.footer # Adiciona rodapé personalizado
+    - navigation.tabs.sticky # Fixa as abas para não desaparecerem com a rolagem
+   # - content.tabs.link # Mantém abertas as mesmas abas de conteúdo já selecionadas pelo usuário ao navegar entre páginas
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - footnotes
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+  - awesome-nav # https://lukasgeiter.github.io/mkdocs-awesome-nav/ (instalar com: `pip install mkdocs-awesome-nav`)
+  - social: # Gera um cartão para compartilhamento da url (instalar com: `pip install "mkdocs-material[imaging]"`)
+      cards_layout_options:
+        title: Ilha da Boa Viagem (MROSC) # Para diferenciar o que vai escrito como título do cartão do nome da página
+        description: Plano estratégico para gestão cultural da Ilha da Boa Viagem, em Niterói (RJ).
+
+extra:
+    social: # Ícones com links para contato
+      - icon: material/email
+        link: mailto:solanda@vivas.art.br
+      - icon: fontawesome/brands/github
+        link: https://github.com/lucasfainblat/ibv
+  # Carrega scripts adicionais (Mermaid + init)
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
+  
+extra_css:
+  - assets/stylesheets/extra.css
+   # consent: # Mensagem de cookies
+    #  title: 🍪 Aviso de cookies
+     # description: Os cookies são usados aqui para identificar suas visitas e preferências, além de medir a efetividade do site identificando se os usuários estão encontrando o que procuram. Quando você aceita nossos cookies, ajuda a melhorar nosso site! 😉
+      #actions:
+       # - accept
+        #- reject
+        
